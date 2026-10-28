@@ -1,0 +1,67 @@
+:root{--bg:#f6f7f9;--card:#fff;--ink:#1d2330;--sub:#667085;--line:#e3e6ec;--main:#2f5fd0;--main-d:#2449a3;--ok:#1f8a4c;--warn:#c27a00;--bad:#c0392b}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 -apple-system,"Apple SD Gothic Neo","Noto Sans KR",sans-serif}
+header.top{background:#fff;border-bottom:1px solid var(--line);padding:12px 20px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:5}
+header.top h1{font-size:17px;margin:0}
+main{max-width:980px;margin:0 auto;padding:20px 16px 60px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin-bottom:16px}
+.card h2{font-size:16px;margin:0 0 10px}
+.grid{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(130px,1fr))}
+.stat{background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+.stat b{display:block;font-size:24px}
+.stat span{color:var(--sub);font-size:13px}
+.stat.big b{color:var(--main)}
+.stat.low b{color:var(--bad)}
+.tabs{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 16px}
+.tabs button{border:1px solid var(--line);background:#fff;border-radius:999px;padding:7px 14px;cursor:pointer;font:inherit}
+.tabs button.on{background:var(--main);color:#fff;border-color:var(--main)}
+button{font:inherit}
+.primary{background:var(--main);color:#fff;border:0;border-radius:8px;padding:8px 14px;cursor:pointer}
+.primary:hover{background:var(--main-d)}
+.ghost{background:#fff;border:1px solid var(--line);border-radius:8px;padding:7px 12px;cursor:pointer}
+.ghost:hover{background:#f1f3f7}
+.sm{padding:3px 8px;font-size:13px;border-radius:6px}
+.danger{color:var(--bad)}
+input,select,textarea{font:inherit;width:100%;padding:8px 10px;border:1px solid var(--line);border-radius:8px;background:#fff}
+textarea{min-height:76px;resize:vertical}
+select[multiple]{min-height:110px}
+label{display:block;font-size:13px;color:var(--sub);margin:10px 0 4px}
+.hint{font-size:12px;color:var(--sub);margin-top:3px}
+.row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.row.end{justify-content:flex-end;margin-top:14px}
+.row.between{justify-content:space-between}
+.table-wrap{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th,td{text-align:left;padding:8px 8px;border-bottom:1px solid var(--line);vertical-align:top;white-space:nowrap}
+td.wrap{white-space:normal;min-width:180px}
+th{color:var(--sub);font-weight:500;font-size:13px}
+.chip{display:inline-block;padding:1px 9px;border-radius:999px;font-size:12px;background:#eef1f6;color:#44506a}
+.chip.출석{background:#e3f4ea;color:var(--ok)}
+.chip.결석{background:#fbe6e3;color:var(--bad)}
+.chip.예정{background:#e6eefc;color:var(--main)}
+.chip.연기{background:#fff1d6;color:var(--warn)}
+.chip.취소{background:#eceef2;color:#7a8294}
+.alert{background:#fff4e0;border:1px solid #f1d29b;border-radius:10px;padding:10px 14px;margin-bottom:16px}
+.alert div{margin:4px 0}
+.empty{color:var(--sub);padding:8px 0}
+.login{max-width:420px;margin:30px auto}
+.seg{display:flex;gap:6px;margin-bottom:8px}
+.seg button{flex:1;border:1px solid var(--line);background:#fff;border-radius:8px;padding:8px;cursor:pointer}
+.seg button.on{background:var(--main);color:#fff;border-color:var(--main)}
+.list-item{display:flex;justify-content:space-between;gap:10px;align-items:center;padding:9px 0;border-bottom:1px solid var(--line)}
+.list-item:last-child{border:0}
+.list-item small{color:var(--sub);display:block}
+.journal{border-bottom:1px solid var(--line);padding:12px 0}
+.journal:last-child{border:0}
+.journal h4{margin:0 0 6px;font-size:15px}
+.journal p{margin:3px 0;white-space:pre-wrap}
+.journal .k{color:var(--sub);font-size:13px}
+.video{aspect-ratio:16/9;width:100%;border:0;border-radius:10px;background:#000}
+.vgrid{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+dialog{border:0;border-radius:14px;padding:20px;width:min(520px,94vw);max-height:90vh;box-shadow:0 10px 40px rgba(0,0,0,.25)}
+dialog::backdrop{background:rgba(20,25,40,.45)}
+dialog h3{margin:0 0 4px}
+#toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:#222a3a;color:#fff;padding:10px 18px;border-radius:10px;z-index:99;max-width:90vw}
+#toast.err{background:var(--bad)}
+.muted{color:var(--sub)}
+@media(max-width:600px){main{padding:14px 10px 50px}.card{padding:14px}}
